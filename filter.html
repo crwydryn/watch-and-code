@@ -1,0 +1,41 @@
+<script src="../tinytest.js"></script>
+
+
+<script>
+
+tests({
+    'It should run the callback function array.length times.': function() { 
+      var counter = 0;
+      forEach([1, 2, 3], function() {
+        counter++;
+      });
+      eq(counter, 3);
+    },
+  
+  'It should pass in the ith element as the first argument to the callback.': function() { // The value of the current element being processed in the array.
+    forEach([5], function(number) {
+      eq(number, 5);
+    });
+  },
+  
+  'It should pass in the ith position as the second argument to the callback.': function() { // The index of the current element being processed in the array.
+    forEach([1000], function(number, index) {
+      eq(index, 0);
+    });
+  },
+  
+   'It should pass in the original array as the third argument to the callback.': function() { // The array that forEach() is being applied to.
+    var testArray = [1, 2, 3];
+    forEach(testArray, function(number, index, originalArray) {
+      eq(originalArray, testArray);
+    });
+  },
+  
+  'It should accept a configurable this object': function() {
+    forEach([1], function() {
+      eq(this.description, 'configurable this object')
+    }, {description: 'configurable this object'});
+  }
+  
+  });
+  </script>
