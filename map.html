@@ -1,0 +1,69 @@
+<script src="../tinytest.js"></script>
+
+<script>
+
+
+
+tests({
+    'It should run the callback function array.length times.': function() { 
+    fail();
+    //   var counter = 0;
+    //  map([1, 2, 3], function() {
+    //     counter++;
+    //   });
+    //   eq(counter, 3);
+    },
+  
+  'It should pass in the ith element as the first argument to the callback.': function() { // The value of the current element being processed in the array.
+    fail();
+    // map([5], function(number) {
+    //   eq(number, 5);
+    // });
+  },
+  
+  'It should pass in the ith position as the second argument to the callback.': function() { // The index of the current element being processed in the array.
+    fail();
+//    map([1000], function(number, index) {
+//       eq(index, 0);
+//     });
+  },
+  
+   'It should pass in the original array as the third argument to the callback.': function() { // The array that filter() is being applied to.
+    fail();
+    // var testArray = [1, 2, 3];
+    // map(testArray, function(number, index, originalArray) {
+    //   eq(originalArray, testArray);
+    // });
+  },
+  
+  'It should accept an optional this object.': function() {
+    fail();
+    // map([1], function() {
+    //   eq(this.description, 'optional this object');
+    // }, {description: 'optional this object'})
+  },
+    
+  'It should return an array.': function() {
+    fail();
+    // var filteredArray = map([1,2,3], function() {})
+    // eq(Array.isArray(filteredArray), true);
+  },
+  
+  
+  'It should return a new array, not the array being filtered': function() {
+    fail();
+    // var arrayBeingFiltered = [];
+    // var filteredArray = map(arrayBeingFiltered, function() {});
+    // eq(filteredArray !== arrayBeingFiltered, true);
+  },
+
+  'It should return a new array consisting of elements derived only from the callback function returning true': function() {
+    fail();
+    // var filteredArray = map([1, 2, 3], function(number) {
+    //   return number > 1;
+    // });
+    // eq(filteredArray.length, 2);
+    // eq(filteredArray[0], 2);
+  }
+})
+  </script>
